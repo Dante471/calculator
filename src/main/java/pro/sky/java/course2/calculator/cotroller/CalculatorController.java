@@ -38,9 +38,6 @@ public class CalculatorController {
 
     @GetMapping("/divide")
     public String displayDivision(@RequestParam int num1, @RequestParam int num2) {
-        if (num2 == 0) {
-            return "На ноль делить нельзя!";
-        }
         return num1 + " / " + num2 + " = " + calculatorService.division(num1, num2);
     }
 
